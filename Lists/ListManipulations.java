@@ -30,8 +30,45 @@ public class ListManipulations {
 				break;
 				case "Insert" : 
 					nums.add(Integer.parseInt(command.get(2)), Integer.parseInt(command.get(1)));
-					
 				break;
+				case "Contains" :
+					if (nums.contains(Integer.valueOf(Integer.parseInt(command.get(1))))) {
+						System.out.println("Yes");
+					} else {
+						System.out.println("No such number");
+					}
+				break;
+				case "Print even" :
+					for( int i = 0; i < nums.size(); i++) {
+						if (nums.get(i) % 2 == 0) {
+							System.out.print(nums.get(i) + " ");
+						}
+					}
+				break;
+				case "Print Odd" : 
+					for( int i = 0; i < nums.size(); i++) {
+						if (nums.get(i) % 2 != 0) {
+							System.out.print(nums.get(i) + " ");
+						}
+					}
+				break;
+				case "Get sum" : 
+					int sum =0;
+					for( int i = 0; i < nums.size(); i++) {
+						sum += nums.get(i);
+					}
+				break;
+				case "Filter" :
+					switch (command.get(1)) {
+						case "<" :
+						break;
+						case ">" :
+						break;
+						case ">=" :
+						break;
+						case "<=" :
+						break;
+				break;	
 			}
 			
 			command = Arrays.stream(scanner.nextLine().split(" "))
