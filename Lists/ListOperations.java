@@ -39,16 +39,18 @@ public class ListOperations {
 				break;
 				
 				case "Shift" :
-					int count = Integer.parseInt(commandData[2])
+					int count = Integer.parseInt(commandData[2]);
 					if (commandData[1].equals("left")) {
 						for (int i = 0; i < count; i++) {
-							int element = list[0];
-							list.remove(list(list.size()-1));
+							int element = list.get(0);
+							list.remove(0);
+							list.add(element);
 						}
 					} else if (commandData[1].equals("right")) {
 						for (int i = 0; i < count; i++) {
-							int element = list[0];
-							list.remove(list(list.size()-1));
+							int element = list.get(list.size()-1);
+							list.remove(list.get(list.size()-1));
+							list.add(0, element);
 						}					
 					}
 				break;
