@@ -46,7 +46,10 @@ public class ListOperations {
 							list.remove(list(list.size()-1));
 						}
 					} else if (commandData[1].equals("right")) {
-												
+						for (int i = 0; i < count; i++) {
+							int element = list[0];
+							list.remove(list(list.size()-1));
+						}					
 					}
 				break;
 			}
