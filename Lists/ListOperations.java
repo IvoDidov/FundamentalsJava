@@ -20,18 +20,29 @@ public class ListOperations {
 				break;
 				
 				case "Insert" : 
-					int numToAdd = Integer.parseInt(commandData[1]);
-					int indexToAdd = Integer.parseInt(commandData[2]);
-					if ()
+					int numToIns = Integer.parseInt(commandData[1]);
+					int indexToIns = Integer.parseInt(commandData[2]);
+					if (indexToIns >= 0 && indexToIns <= list.size() - 1) {
+						list.add(indexToIns, numToIns);
+					} else {
+						System.out.println("Invalid Index");
+					}
 				break;
 				
 				case "Remove" :
-				
+					int indexRemove = Integer.parseInt(commandData[1]);
+					if (indexRemove >= 0 && indexRemove <= list.size() - 1) {
+						list.remove(indexRemove);
+					} else {
+						System.out.println("Invalid Index");
+					}
 				break;
 				
 				case "Shift" :
+					int count = Integer.parseInt(commandData[2])
 					if (commandData[1].equals("left")) {
-						
+						for (int i = 0; i < count; i++) {
+						}
 					} else if (commandData[1].equals("right")) {
 						
 					}
@@ -50,3 +61,4 @@ public class ListOperations {
 		
 	}
 }
+
