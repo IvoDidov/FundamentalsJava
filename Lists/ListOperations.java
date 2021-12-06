@@ -42,14 +42,15 @@ public class ListOperations {
 					int count = Integer.parseInt(commandData[2])
 					if (commandData[1].equals("left")) {
 						for (int i = 0; i < count; i++) {
+							int element = list[0];
+							list.remove(list(list.size()-1));
 						}
 					} else if (commandData[1].equals("right")) {
-						
+												
 					}
 				break;
 			}
 				
-			
 			
 			
 			command = scanner.nextLine();
