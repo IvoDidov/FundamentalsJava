@@ -12,7 +12,7 @@ public class ListOperations {
 			
 		String command = scanner.nextLine();
 		while (!command.equals("End")) {
-			String[] commandData = command.split(" ");
+			String[] commandData = command.split("\\s+");
 			
 			switch (commandData[0]) {
 				case "Add" : 
@@ -25,7 +25,7 @@ public class ListOperations {
 					if (indexToIns >= 0 && indexToIns <= list.size() - 1) {
 						list.add(indexToIns, numToIns);
 					} else {
-						System.out.println("Invalid Index");
+						System.out.println("Invalid index");
 					}
 				break;
 				
@@ -34,7 +34,7 @@ public class ListOperations {
 					if (indexRemove >= 0 && indexRemove <= list.size() - 1) {
 						list.remove(indexRemove);
 					} else {
-						System.out.println("Invalid Index");
+						System.out.println("Invalid index");
 					}
 				break;
 				
