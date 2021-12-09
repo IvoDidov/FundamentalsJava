@@ -25,7 +25,7 @@ public class WordSynonyms {
 		}
 
 		for (Map.Entry<String, List<String>> entry : synonymDictionary.entrySet()) {
-			System.out.printf("%s - %s%n", entry.getKey(), String.join(" ,",entry.getValue()));
+			System.out.printf("%s - %s%n", entry.getKey(), String.join(", ",entry.getValue()));
 		}
 
 
