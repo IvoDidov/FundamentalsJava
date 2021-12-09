@@ -1,5 +1,4 @@
 package Songs;
-
 import java.util.*;
 
 public class Main {
