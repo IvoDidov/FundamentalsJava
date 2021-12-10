@@ -1,9 +1,6 @@
 package Maps;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class CountCharsInAString {
 	public static void main(String[] args) {
@@ -26,10 +23,11 @@ public class CountCharsInAString {
 
 		}
 
-		for (Map.Entry<Character, Integer> entry : lettersCount.entrySet()) {
+/*		for (Map.Entry<Character, Integer> entry : lettersCount.entrySet()) {
 			System.out.println( entry.getKey() + " -> " + entry.getValue());
-		}
+		}*/
 
+		lettersCount.forEach((k, v) -> System.out.println(k + " -> " + v));
 
 	}
 }
