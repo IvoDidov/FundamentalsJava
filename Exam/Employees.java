@@ -15,9 +15,6 @@ public class Employees {
 			Pattern patternMail = Pattern.compile(regexEmail);
 			Matcher matcher = patternMail.matcher(input);
 
-
-
-
 			while (matcher.find()) {
 				String jp1 = matcher.group("jp1") + " ";
 				String jp2 = matcher.group("jp2") + " ";
@@ -29,11 +26,8 @@ public class Employees {
 					jp3 = "";
 				}
 				String result = matcher.group("name") + " is " + jp1  + jp2 + jp3  +"at " + matcher.group("company");
-		//		result = result.replace("null", "");
 				System.out.println(result);
 			}
-
-
 		}
 	}
 }
